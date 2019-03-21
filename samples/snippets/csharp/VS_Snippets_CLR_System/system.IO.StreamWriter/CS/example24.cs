@@ -19,6 +19,7 @@ namespace ConsoleApplication
             using (StreamWriter writer = File.CreateText("newfile.txt"))
             {
                 await writer.WriteAsync(charsToAdd, 0, charsToAdd.Length);
+                await writer.FlushAsync();
             }
         }
     }
